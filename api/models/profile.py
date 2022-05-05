@@ -16,9 +16,9 @@ class Profile(db.Model):
     location = db.Column(db.String)
     vibe_check = db.Column(db.String(200))
     bio = db.Column(db.String(500))
-    sun_sign = db.Column('sun_sign', db.Enum('Ari', 'Tau', 'Gem', 'Can', 'Leo', 'Vir', 'Lib', 'Sco', 'Sag', 'Cap', 'Aqu', 'Pis', name='sun_type'))
-    moon_sign = db.Column('moon_sign', db.Enum('Ari', 'Tau', 'Gem', 'Can', 'Leo', 'Vir', 'Lib', 'Sco', 'Sag', 'Cap', 'Aqu', 'Pis', name='moon_type'))
-    rising_sign = db.Column('rising_sign', db.Enum('Ari', 'Tau', 'Gem', 'Can', 'Leo', 'Vir', 'Lib', 'Sco', 'Sag', 'Cap', 'Aqu', 'Pis', name='rising_type'))
+    # sun_sign = db.Column('sun_sign', db.Enum('Ari', 'Tau', 'Gem', 'Can', 'Leo', 'Vir', 'Lib', 'Sco', 'Sag', 'Cap', 'Aqu', 'Pis', name='sun_type'))
+    # moon_sign = db.Column('moon_sign', db.Enum('Ari', 'Tau', 'Gem', 'Can', 'Leo', 'Vir', 'Lib', 'Sco', 'Sag', 'Cap', 'Aqu', 'Pis', name='moon_type'))
+    # rising_sign = db.Column('rising_sign', db.Enum('Ari', 'Tau', 'Gem', 'Can', 'Leo', 'Vir', 'Lib', 'Sco', 'Sag', 'Cap', 'Aqu', 'Pis', name='rising_type'))
 
     # * Relationships:
     messages = db.relationship("Message", secondary="messages", primaryjoin="Message.recipient_id==Profile.id", secondaryjoin="Message.sender_id==Profile.id")

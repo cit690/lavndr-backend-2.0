@@ -1,3 +1,0 @@
-  to=”/.netlify/functions/api:lavndr” 
-  from=”/*” 
-  status=200

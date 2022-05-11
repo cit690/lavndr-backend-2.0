@@ -1,9 +1,7 @@
 import os
-import contentful
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 
-client = contentful.Client('cfexampleapi', 'b4c0n73n7fu1', api_url='preview.contentful.com')
 
 class Config:
   SQLALCHEMY_ECHO = False

@@ -15,7 +15,7 @@ from api.models.message import Message
 from api.views.auth import auth
 from api.views.profiles import profiles
 from api.views.messages import messages
-from api.views.conversation import conversations
+# from api.views.conversation import conversations
 
 
 cors = CORS()
@@ -35,7 +35,7 @@ def create_app(config):
   app.register_blueprint(auth, url_prefix='/api/auth') 
   app.register_blueprint(profiles, url_prefix='/api/profiles')
   app.register_blueprint(messages, url_prefix='/api/messages')
-  app.register_blueprint(conversations, url_prefix='/api/messages')
+  # app.register_blueprint(conversations, url_prefix='/api/messages')
 
   return app
 
